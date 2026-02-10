@@ -2,8 +2,8 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts.
 
-**Last updated:** 2026-02-10 14:00
-**Total IPs:** 202
+**Last updated:** 2026-02-10 14:46
+**Total IPs:** 206
 
 ## Files
 - `blacklist.csv` - Full blacklist with metadata (ip, first_seen, last_seen, scan_count, country, scanner_types)
@@ -12,8 +12,8 @@ Automatically updated IP blacklist from Internet Scanner alerts.
 ## Top 10 Scanners
 | IP | Scans | Country | Types |
 |----|-------|---------|-------|
-| 78.128.112.74 | 31 | BG | N/A |
-| 79.124.40.174 | 11 | BG | bots, cve-2025-55182 |
+| 78.128.112.74 | 42 | BG | ssh |
+| 79.124.40.174 | 15 | BG | bots, cve-2025-55182 |
 | 204.76.203.69 | 10 | NL | adb-abuse, bots, cve-2020-10987 |
 | 102.22.20.125 | 9 | GH | N/A |
 | 130.12.180.34 | 8 | GB | N/A |
