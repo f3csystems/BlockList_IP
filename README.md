@@ -2,7 +2,7 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts.
 
-**Last updated:** 2026-02-10 13:45
+**Last updated:** 2026-02-10 14:00
 **Total IPs:** 202
 
 ## Files
