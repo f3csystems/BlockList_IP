@@ -2,8 +2,8 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts.
 
-**Last updated:** 2026-02-10 17:00
-**Total IPs:** 225
+**Last updated:** 2026-02-10 17:45
+**Total IPs:** 229
 
 ## Files
 - `blacklist.csv` - Full blacklist with metadata (ip, first_seen, last_seen, scan_count, country, scanner_types)
@@ -12,16 +12,16 @@ Automatically updated IP blacklist from Internet Scanner alerts.
 ## Top 10 Scanners
 | IP | Scans | Country | Types |
 |----|-------|---------|-------|
-| 78.128.112.74 | 57 | BG | bots, bruteforce, cve-2025-55182, ssh |
+| 78.128.112.74 | 68 | BG | bots, bruteforce, cve-2023-1389-2, cve-2025-55182, ssh, web |
 | 79.124.40.174 | 30 | BG | bots, cve-2025-55182, ssh, web |
+| 130.12.180.34 | 17 | GB | bruteforce, ssh, web |
 | 204.76.203.69 | 16 | NL | adb-abuse, bots, cve-2020-10987, ssh |
-| 130.12.180.34 | 12 | GB | bruteforce, web |
 | 102.22.20.125 | 9 | GH | N/A |
 | 34.158.168.101 | 8 | NL | bots, cve-2025-55182, ssh |
 | 64.62.156.80 | 5 | US | email |
 | 103.120.189.68 | 5 | IN | cve-2025-55182 |
 | 103.20.91.68 | 4 | ID | cve-2025-55182 |
-| 185.224.128.16 | 3 | NL | ssh |
+| 34.122.147.229 | 3 | US | ssh, web |
 
 ## Firewall Import Commands
 
