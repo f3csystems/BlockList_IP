@@ -2,8 +2,8 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts.
 
-**Last updated:** 2026-02-10 11:52
-**Total IPs:** 189
+**Last updated:** 2026-02-10 12:01
+**Total IPs:** 191
 
 ## Files
 - `blacklist.csv` - Full blacklist with metadata (ip, first_seen, last_seen, scan_count, country, scanner_types)
@@ -15,8 +15,8 @@ Automatically updated IP blacklist from Internet Scanner alerts.
 | 204.76.203.69 | 10 | NL | adb-abuse, bots, cve-2020-10987 |
 | 78.128.112.74 | 10 | BG | N/A |
 | 102.22.20.125 | 9 | GH | N/A |
-| 34.158.168.101 | 6 | NL | bots, cve-2025-55182 |
 | 130.12.180.34 | 6 | GB | N/A |
+| 34.158.168.101 | 6 | NL | bots, cve-2025-55182 |
 | 64.62.156.80 | 5 | US | email |
 | 103.20.91.68 | 4 | ID | cve-2025-55182 |
 | 103.120.189.68 | 4 | IN | cve-2025-55182 |
