@@ -2,8 +2,8 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts.
 
-**Last updated:** 2026-02-11 06:45
-**Total IPs:** 377
+**Last updated:** 2026-02-11 07:00
+**Total IPs:** 379
 
 ## Files
 - `blacklist.csv` - Full blacklist with metadata (ip, first_seen, last_seen, scan_count, country, scanner_types)
