@@ -1,13 +1,14 @@
 # Internet Scanner Blacklist
 
-Automatically updated IP blacklist from Internet Scanner alerts.
+Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-02-11 09:00
-**Total IPs:** 398
+**Last updated:** 2026-02-11 09:21
+**Total active IPs:** 398
+**Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
 ## Files
 - `blacklist.csv` - Full blacklist with metadata (ip, first_seen, last_seen, scan_count, country, scanner_types)
-- `blacklist.txt` - Plain text IP list (for firewall import)
+- `blacklist.txt` - Plain text IP list (1 IP per line, for External Dynamic List / Threat Feed)
 
 ## Top 10 Scanners
 | IP | Scans | Country | Types |
@@ -23,13 +24,17 @@ Automatically updated IP blacklist from Internet Scanner alerts.
 | 103.120.189.68 | 9 | IN | cve-2025-55182, ssh |
 | 103.20.91.68 | 8 | ID | PaloAlto, cve-2025-55182, ssh |
 
-## Firewall Import Commands
+## Firewall Integration — External Dynamic Lists / Threat Feeds
 
-Use `blacklist.txt` to block all listed IPs. Below are ready-to-use commands for common firewalls.
+> **Important:** This blacklist **must** be consumed via External Dynamic Lists (EDL) or Threat Feeds.
+> Do **not** import the IPs manually or via script — only dynamic feeds ensure automatic updates
+> and respect the 30-day retention policy (expired IPs are automatically removed).
 
-### FortiGate
+The file `blacklist.txt` contains one IP per line and is updated every 45 minutes.
+IPs not seen for 30+ days are automatically purged to keep the list relevant.
 
-**Option 1 — External Threat Feed (recommended, auto-updates):**
+### FortiGate — External Threat Feed
+
 ```
 config system external-resource
     edit "InternetScanner-Blacklist"
@@ -54,28 +59,11 @@ config firewall policy
 end
 ```
 
-**Option 2 — One-shot CLI import (from file copied to FortiGate):**
-```bash
-# Upload blacklist.txt to FortiGate, then:
-config firewall address
-while read IP; do
-    edit "scanner-${IP}"
-        set type ipmask
-        set subnet ${IP}/32
-    next
-done < blacklist.txt
-end
+The FortiGate will automatically fetch and refresh the IP list every 45 minutes.
 
-config firewall addrgrp
-    edit "InternetScanner-Blacklist"
-        append member $(while read IP; do echo -n "scanner-${IP} "; done < blacklist.txt)
-    next
-end
-```
+### Palo Alto — External Dynamic List (EDL)
 
-### Palo Alto (PAN-OS)
-
-**Option 1 — External Dynamic List (EDL, recommended, auto-updates):**
+**GUI:**
 
 1. Go to **Objects > External Dynamic Lists**
 2. Click **Add** and configure:
@@ -85,7 +73,7 @@ end
    - **Repeat:** Every 30 minutes
 3. Create a **Security Policy** referencing this EDL as source address with action **Deny**
 
-CLI equivalent:
+**CLI equivalent:**
 ```
 set external-list InternetScanner-Blacklist type ip
 set external-list InternetScanner-Blacklist url "https://raw.githubusercontent.com/avillance/BlockList_IP/main/blacklist.txt"
@@ -97,21 +85,7 @@ set rulebase security rules Block-InternetScanners action deny
 set rulebase security rules Block-InternetScanners log-start yes
 ```
 
-**Option 2 — Batch CLI import:**
-```bash
-# From a management host with API access:
-while read IP; do
-    curl -k -X POST "https://<FIREWALL>/api/?type=config" \
-        -d "key=<API_KEY>" \
-        -d "action=set" \
-        -d "xpath=/config/devices/entry/vsys/entry/address/entry[@name='scanner-${IP}']" \
-        -d "element=<ip-netmask>${IP}/32</ip-netmask>"
-done < blacklist.txt
-```
-
-### Check Point
-
-**Option 1 — Updatable Object / External Feed (recommended, R80.10+):**
+### Check Point — Network Feed (R80.10+)
 
 1. In **SmartConsole**, go to **New > More > Network Feed**
 2. Configure:
@@ -122,28 +96,5 @@ done < blacklist.txt
 3. Use this object as **Source** in a **Drop** rule
 4. **Install Policy**
 
-**Option 2 — mgmt_cli batch import:**
-```bash
-# From Check Point management server:
-mgmt_cli login user <USER> password <PASS> > sid.txt
-SID=$(cat sid.txt | jq -r '.sid')
-
-while read IP; do
-    mgmt_cli add host name "scanner-${IP}" ip-address "${IP}" -s "$SID"
-done < blacklist.txt
-
-mgmt_cli add group name "InternetScanner-Blacklist" -s "$SID"
-while read IP; do
-    mgmt_cli set group name "InternetScanner-Blacklist" members.add "scanner-${IP}" -s "$SID"
-done < blacklist.txt
-
-mgmt_cli publish -s "$SID"
-mgmt_cli logout -s "$SID"
-```
-
-> **Note:** For all firewalls, **Option 1 (External Feed/EDL)** is strongly recommended.
-> The firewall fetches `blacklist.txt` directly from this repository at regular intervals,
-> so new scanner IPs are blocked automatically without manual intervention.
-
 ---
-*Updated automatically every 45 minutes*
+*Updated automatically every 45 minutes — IPs expire after 30 days without activity*
