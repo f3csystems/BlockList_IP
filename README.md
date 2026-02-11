@@ -2,7 +2,7 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-02-11 10:00
+**Last updated:** 2026-02-11 10:06
 **Total active IPs:** 403
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
@@ -39,7 +39,7 @@ IPs not seen for 30+ days are automatically purged to keep the list relevant.
 config system external-resource
     edit "InternetScanner-Blacklist"
         set type address
-        set resource "https://raw.githubusercontent.com/avillance/BlockList_IP/main/blacklist.txt"
+        set resource "https://raw.githubusercontent.com/f3cSystems/BlockList_IP/main/blacklist.txt"
         set refresh-rate 45
     next
 end
@@ -69,14 +69,14 @@ The FortiGate will automatically fetch and refresh the IP list every 45 minutes.
 2. Click **Add** and configure:
    - **Name:** `InternetScanner-Blacklist`
    - **Type:** IP List
-   - **Source:** `https://raw.githubusercontent.com/avillance/BlockList_IP/main/blacklist.txt`
+   - **Source:** `https://raw.githubusercontent.com/f3cSystems/BlockList_IP/main/blacklist.txt`
    - **Repeat:** Every 30 minutes
 3. Create a **Security Policy** referencing this EDL as source address with action **Deny**
 
 **CLI equivalent:**
 ```
 set external-list InternetScanner-Blacklist type ip
-set external-list InternetScanner-Blacklist url "https://raw.githubusercontent.com/avillance/BlockList_IP/main/blacklist.txt"
+set external-list InternetScanner-Blacklist url "https://raw.githubusercontent.com/f3cSystems/BlockList_IP/main/blacklist.txt"
 set external-list InternetScanner-Blacklist recurring five-minute
 
 set rulebase security rules Block-InternetScanners from any to any
@@ -90,7 +90,7 @@ set rulebase security rules Block-InternetScanners log-start yes
 1. In **SmartConsole**, go to **New > More > Network Feed**
 2. Configure:
    - **Name:** `InternetScanner-Blacklist`
-   - **URL:** `https://raw.githubusercontent.com/avillance/BlockList_IP/main/blacklist.txt`
+   - **URL:** `https://raw.githubusercontent.com/f3cSystems/BlockList_IP/main/blacklist.txt`
    - **Update interval:** 30 minutes
    - **Content type:** IP Address
 3. Use this object as **Source** in a **Drop** rule
