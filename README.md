@@ -2,8 +2,8 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-02-13 08:00
-**Total active IPs:** 870
+**Last updated:** 2026-02-13 08:46
+**Total active IPs:** 878
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
 ## Files
@@ -15,7 +15,7 @@ Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 |----|-------|---------|-------|
 | 78.128.112.74 | 324 | BG | PaloAlto, Rapid7, adb-abuse, bots, bruteforce, cve-2023-1389-2, cve-2025-55182, dicom, email, onyphe, rdp, ssh, web, yarn |
 | 16.58.56.214 | 41 | US | PaloAlto, cve-2025-55182, ssh |
-| 185.224.128.16 | 35 | NL | PaloAlto, adb-abuse, bots, ssh |
+| 185.224.128.16 | 39 | NL | PaloAlto, adb-abuse, bots, ssh |
 | 79.124.40.174 | 32 | BG | Rapid7, bots, cve-2025-55182, ssh, web |
 | 66.240.236.116 | 27 | US | PaloAlto, bruteforce, cve-2020-10987, cve-2025-55182, email, ssh |
 | 130.12.180.34 | 26 | GB | bots, bruteforce, ssh, web |
