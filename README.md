@@ -2,7 +2,7 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-03-17 10:00
+**Last updated:** 2026-03-17 10:45
 **Total active IPs:** 2864
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
