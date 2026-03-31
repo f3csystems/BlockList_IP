@@ -2,8 +2,8 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-03-19 13:00
-**Total active IPs:** 2722
+**Last updated:** 2026-03-31 16:44
+**Total active IPs:** 1719
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
 ## Files
@@ -13,16 +13,16 @@ Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 ## Top 10 Scanners
 | IP | Scans | Country | Types |
 |----|-------|---------|-------|
-| 78.128.112.74 | 472 | BG | PaloAlto, Rapid7, adb-abuse, bots, bruteforce, cve-2020-10987, cve-2021-26855, cve-2023-1389-2, cve-2023-26801, cve-2025-55182, dicom, email, ftp, onyphe, rdp, ssh, web, yarn |
+| 78.128.112.74 | 477 | BG | PaloAlto, Rapid7, adb-abuse, bots, bruteforce, cve-2020-10987, cve-2021-26855, cve-2023-1389-2, cve-2023-26801, cve-2025-55182, dicom, email, ftp, onyphe, rdp, ssh, web, yarn |
+| 179.43.146.226 | 164 | CH | web, bruteforce, bots, PaloAlto, scada, ssh |
 | 16.58.56.214 | 56 | US | PaloAlto, bots, bruteforce, cve-2025-55182, ssh, web |
-| 176.65.139.30 | 45 | DE | PaloAlto, adb-abuse, bots, bruteforce, cve-2025-55182, ssh, web, yarn |
 | 87.120.191.67 | 40 | NL | PaloAlto, adb-abuse, bots, bruteforce, cve-2025-55182-2, onyphe, ssh, web |
 | 104.131.177.14 | 39 | US | bruteforce, web |
 | 80.66.83.43 | 39 | BG | bruteforce, cve-2025-55182, ssh |
+| 45.148.10.187 | 37 | NL | bruteforce, web, ssh, email |
 | 35.202.9.133 | 34 | US | PaloAlto, email, ssh |
 | 79.124.40.174 | 33 | BG | Rapid7, bots, cve-2017-9841, cve-2025-55182, cve-2025-55182-2, ssh, web |
-| 45.148.10.124 | 33 | NL | adb-abuse, bruteforce, cve-2025-55182, cve-2025-55182-2, ssh, web |
-| 209.38.25.93 | 31 | AU | bruteforce, ssh |
+| 51.38.211.50 | 31 | FR | PaloAlto, bruteforce, email, ssh, voip, web |
 
 ## Firewall Integration — External Dynamic Lists / Threat Feeds
 
