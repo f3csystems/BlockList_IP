@@ -2,8 +2,8 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-05-13 13:45
-**Total active IPs:** 1636
+**Last updated:** 2026-05-13 14:00
+**Total active IPs:** 1635
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
 ## Files
@@ -14,7 +14,6 @@ Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 | IP | Scans | Country | Types |
 |----|-------|---------|-------|
 | 78.128.112.74 | 490 | BG | PaloAlto, Rapid7, adb-abuse, bots, bruteforce, cve-2020-10987, cve-2021-26855, cve-2023-1389-2, cve-2023-26801, cve-2025-55182, cve-2025-55182-2, dicom, email, ftp, onyphe, rdp, scada, ssh, web, yarn |
-| 179.43.146.226 | 193 | CH | PaloAlto, bots, bruteforce, cve-2017-9841, cve-2021-26855, email, onyphe, scada, ssh, web |
 | 160.119.76.58 | 48 | NL | ssh |
 | 160.119.76.51 | 33 | NL | email, ssh |
 | 160.119.76.13 | 28 | NL | bruteforce, ssh, web |
@@ -23,6 +22,7 @@ Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 | 34.238.240.3 | 24 | US | bots, ssh |
 | 18.218.118.203 | 24 | US | PaloAlto, email, ssh |
 | 13.218.94.63 | 24 | US | PaloAlto, ssh |
+| 44.247.181.228 | 23 | US | email |
 
 ## Firewall Integration — External Dynamic Lists / Threat Feeds
 
