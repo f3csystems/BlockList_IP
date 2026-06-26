@@ -2,8 +2,8 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-06-26 18:45
-**Total active IPs:** 2283
+**Last updated:** 2026-06-26 19:00
+**Total active IPs:** 2280
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
 ## Files
@@ -17,12 +17,12 @@ Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 | 209.38.221.33 | 26 | DE | web |
 | 51.159.125.208 | 25 | FR | ssh, web |
 | 64.227.99.233 | 25 | US | ssh, web |
-| 64.227.97.195 | 23 | US | ssh, web |
 | 100.51.195.110 | 23 | US | email |
 | 52.23.241.253 | 22 | US | Rapid7, bots, ssh |
 | 54.226.156.87 | 22 | US | PaloAlto, ssh |
 | 3.77.221.157 | 22 | DE | PaloAlto, bots, email |
 | 52.200.76.145 | 21 | US | web |
+| 35.202.9.133 | 20 | US | email |
 
 ## Firewall Integration — External Dynamic Lists / Threat Feeds
 
