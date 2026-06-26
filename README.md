@@ -2,7 +2,7 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-06-26 21:45
+**Last updated:** 2026-06-26 22:00
 **Total active IPs:** 2273
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
@@ -22,7 +22,7 @@ Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 | 3.77.221.157 | 22 | DE | PaloAlto, bots, email |
 | 52.200.76.145 | 21 | US | web |
 | 35.202.9.133 | 20 | US | email |
-| 161.35.95.214 | 18 | NL | bruteforce, onyphe, ssh, web |
+| 46.151.178.13 | 18 | NL | bruteforce, web |
 
 ## Firewall Integration — External Dynamic Lists / Threat Feeds
 
