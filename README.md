@@ -2,7 +2,7 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-07-28 10:29
+**Last updated:** 2026-07-28 10:32
 **Total active IPs:** 2416
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
@@ -14,15 +14,15 @@ Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 | IP | Scans | Country | Types |
 |----|-------|---------|-------|
 | 216.180.246.64 | 42 | US | bruteforce, web |
-| 101.36.97.70 | 33 | GB | Censys, PaloAlto, email, ssh |
-| 198.235.24.99 | 28 | TW | PaloAlto, email, ssh |
-| 206.189.9.209 | 24 | NL | bots, email |
-| 47.130.108.237 | 23 | IN | PaloAlto, bots, email |
-| 147.185.132.33 | 22 | US | PaloAlto |
-| 147.185.132.16 | 22 | US | PaloAlto, ssh |
-| 205.210.31.227 | 22 | BR | Censys, PaloAlto, email, ssh |
-| 198.235.24.195 | 22 | BE | PaloAlto |
-| 147.185.132.81 | 22 | US | PaloAlto |
+| 198.235.24.99 | 37 | TW | PaloAlto, email, ssh |
+| 101.36.97.70 | 37 | GB | Censys, PaloAlto, email, ssh |
+| 147.185.132.33 | 29 | US | PaloAlto |
+| 147.185.132.16 | 29 | US | PaloAlto, ssh |
+| 205.210.31.227 | 29 | BR | Censys, PaloAlto, email, ssh |
+| 198.235.24.195 | 29 | BE | PaloAlto |
+| 147.185.132.81 | 29 | US | PaloAlto |
+| 147.185.132.37 | 26 | US | PaloAlto |
+| 198.235.24.227 | 25 | BE | PaloAlto |
 
 ## Firewall Integration — External Dynamic Lists / Threat Feeds
 
@@ -30,7 +30,7 @@ Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 > Do **not** import the IPs manually or via script — only dynamic feeds ensure automatic updates
 > and respect the 30-day retention policy (expired IPs are automatically removed).
 
-The file `blacklist.txt` contains one IP per line and is updated every 45 minutes.
+The file `blacklist.txt` contains one IP per line and is updated every 30 minutes.
 IPs not seen for 30+ days are automatically purged to keep the list relevant.
 
 ### FortiGate — External Threat Feed
@@ -40,7 +40,7 @@ config system external-resource
     edit "InternetScanner-Blacklist"
         set type address
         set resource "https://raw.githubusercontent.com/f3cSystems/BlockList_IP/main/blacklist.txt"
-        set refresh-rate 45
+        set refresh-rate 30
     next
 end
 
@@ -59,7 +59,7 @@ config firewall policy
 end
 ```
 
-The FortiGate will automatically fetch and refresh the IP list every 45 minutes.
+The FortiGate will automatically fetch and refresh the IP list every 30 minutes.
 
 ### Palo Alto — External Dynamic List (EDL)
 
@@ -97,4 +97,4 @@ set rulebase security rules Block-InternetScanners log-start yes
 4. **Install Policy**
 
 ---
-*Updated automatically every 45 minutes — IPs expire after 30 days without activity*
+*Updated automatically every 30 minutes — IPs expire after 30 days without activity*
