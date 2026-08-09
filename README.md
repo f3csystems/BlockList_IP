@@ -2,8 +2,8 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-08-10 00:40
-**Total active IPs:** 2352
+**Last updated:** 2026-08-10 01:10
+**Total active IPs:** 2351
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
 ## Files
@@ -13,16 +13,16 @@ Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 ## Top 10 Scanners
 | IP | Scans | Country | Types |
 |----|-------|---------|-------|
-| 198.235.24.195 | 4271 | BE | PaloAlto |
-| 147.185.132.33 | 4271 | US | PaloAlto |
-| 147.185.132.81 | 4271 | US | PaloAlto |
-| 198.235.24.227 | 3661 | BE | PaloAlto |
-| 198.235.24.176 | 3661 | BE | PaloAlto |
-| 198.235.24.112 | 3052 | TW | PaloAlto |
-| 86.54.31.38 | 3052 | NL | bots, email, ssh |
-| 147.185.132.87 | 3051 | US | PaloAlto |
-| 198.235.24.84 | 3051 | TW | PaloAlto |
-| 198.235.24.89 | 3051 | TW | PaloAlto |
+| 198.235.24.195 | 4278 | BE | PaloAlto |
+| 147.185.132.81 | 4278 | US | PaloAlto |
+| 147.185.132.33 | 4278 | US | PaloAlto |
+| 198.235.24.227 | 3667 | BE | PaloAlto |
+| 198.235.24.176 | 3667 | BE | PaloAlto |
+| 198.235.24.112 | 3057 | TW | PaloAlto |
+| 86.54.31.38 | 3057 | NL | bots, email, ssh |
+| 198.235.24.89 | 3056 | TW | PaloAlto |
+| 205.210.31.225 | 3056 | BR | PaloAlto |
+| 147.185.132.198 | 3056 | US | PaloAlto |
 
 ## Firewall Integration — External Dynamic Lists / Threat Feeds
 
