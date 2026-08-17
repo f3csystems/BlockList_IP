@@ -2,8 +2,8 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-08-17 20:40
-**Total active IPs:** 2371
+**Last updated:** 2026-08-17 21:10
+**Total active IPs:** 2367
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
 ## Files
@@ -13,16 +13,16 @@ Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 ## Top 10 Scanners
 | IP | Scans | Country | Types |
 |----|-------|---------|-------|
-| 147.185.132.33 | 6896 | US | PaloAlto |
-| 147.185.132.81 | 6896 | US | PaloAlto |
-| 198.235.24.227 | 5911 | BE | PaloAlto |
-| 198.235.24.112 | 4927 | TW | PaloAlto |
-| 147.185.132.198 | 4926 | US | PaloAlto |
-| 147.185.132.87 | 4926 | US | PaloAlto |
-| 198.235.24.84 | 4926 | TW | PaloAlto |
-| 198.235.24.89 | 4926 | TW | PaloAlto |
-| 147.185.132.55 | 4816 | US | PaloAlto |
-| 205.210.31.45 | 4536 | US | PaloAlto |
+| 147.185.132.33 | 6903 | US | PaloAlto |
+| 147.185.132.81 | 6903 | US | PaloAlto |
+| 198.235.24.227 | 5917 | BE | PaloAlto |
+| 198.235.24.112 | 4932 | TW | PaloAlto |
+| 147.185.132.198 | 4931 | US | PaloAlto |
+| 147.185.132.87 | 4931 | US | PaloAlto |
+| 198.235.24.84 | 4931 | TW | PaloAlto |
+| 198.235.24.89 | 4931 | TW | PaloAlto |
+| 147.185.132.55 | 4821 | US | PaloAlto |
+| 205.210.31.45 | 4541 | US | PaloAlto |
 
 ## Firewall Integration — External Dynamic Lists / Threat Feeds
 
