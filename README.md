@@ -2,7 +2,7 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-08-23 03:10
+**Last updated:** 2026-08-23 03:40
 **Total active IPs:** 2305
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
@@ -13,16 +13,16 @@ Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 ## Top 10 Scanners
 | IP | Scans | Country | Types |
 |----|-------|---------|-------|
-| 147.185.132.81 | 8667 | US | PaloAlto |
-| 198.235.24.112 | 6192 | TW | PaloAlto |
-| 147.185.132.198 | 6191 | US | PaloAlto |
-| 147.185.132.55 | 6081 | US | PaloAlto |
-| 205.210.31.45 | 5801 | US | PaloAlto |
-| 198.235.24.99 | 5599 | TW | PaloAlto, bots, ssh |
-| 198.235.24.204 | 5541 | BE | PaloAlto |
-| 205.210.31.249 | 5475 | BR | PaloAlto |
+| 147.185.132.81 | 8674 | US | PaloAlto |
+| 198.235.24.112 | 6197 | TW | PaloAlto |
+| 147.185.132.198 | 6196 | US | PaloAlto |
+| 147.185.132.55 | 6086 | US | PaloAlto |
+| 205.210.31.45 | 5806 | US | PaloAlto |
+| 198.235.24.99 | 5608 | TW | PaloAlto, bots, ssh |
+| 198.235.24.204 | 5546 | BE | PaloAlto |
+| 205.210.31.249 | 5482 | BR | PaloAlto |
 | 147.185.132.37 | 5283 | US | PaloAlto |
-| 147.185.132.165 | 5161 | US | PaloAlto |
+| 147.185.132.165 | 5171 | US | PaloAlto |
 
 ## Firewall Integration — External Dynamic Lists / Threat Feeds
 
