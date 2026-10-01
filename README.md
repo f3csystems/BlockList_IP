@@ -2,8 +2,8 @@
 
 Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 
-**Last updated:** 2026-10-01 11:35
-**Total active IPs:** 2578
+**Last updated:** 2026-10-01 11:57
+**Total active IPs:** 2576
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
 ## Files
@@ -13,16 +13,16 @@ Automatically updated IP blacklist from Internet Scanner alerts (Sekoia.io).
 ## Top 10 Scanners
 | IP | Scans | Country | Types |
 |----|-------|---------|-------|
-| 198.235.24.236 | 11422 | BE | PaloAlto, email, ssh |
-| 198.235.24.238 | 10171 | BE | PaloAlto, ssh |
-| 205.210.31.234 | 9766 | BR | Censys, PaloAlto, email |
-| 205.210.31.68 | 9529 | US | PaloAlto |
-| 147.185.132.165 | 9031 | US | PaloAlto, email |
+| 198.235.24.236 | 11431 | BE | PaloAlto, email, ssh |
+| 198.235.24.238 | 10181 | BE | PaloAlto, ssh |
+| 205.210.31.68 | 9537 | US | PaloAlto |
+| 147.185.132.165 | 9041 | US | PaloAlto, email |
 | 198.235.24.116 | 9026 | TW | PaloAlto, email, ssh |
 | 198.235.24.183 | 7539 | BE | PaloAlto |
-| 147.185.132.237 | 7459 | US | PaloAlto, ssh |
-| 198.235.24.99 | 7372 | TW | PaloAlto, ssh |
-| 147.185.132.81 | 7149 | US | PaloAlto |
+| 147.185.132.237 | 7465 | US | PaloAlto, ssh |
+| 198.235.24.99 | 7381 | TW | PaloAlto, ssh |
+| 147.185.132.81 | 7156 | US | PaloAlto |
+| 205.210.31.222 | 7063 | BR | PaloAlto |
 
 ## Firewall Integration — External Dynamic Lists / Threat Feeds
 
@@ -39,7 +39,7 @@ IPs not seen for 30+ days are automatically purged to keep the list relevant.
 config system external-resource
     edit "InternetScanner-Blacklist"
         set type address
-        set resource "https://raw.githubusercontent.com/f3cSystems/BlockList_IP/main/blacklist.txt"
+        set resource "https://raw.githubusercontent.com/f3csystems/BlockList_IP/main/blacklist.txt"
         set refresh-rate 30
     next
 end
@@ -69,14 +69,14 @@ The FortiGate will automatically fetch and refresh the IP list every 30 minutes.
 2. Click **Add** and configure:
    - **Name:** `InternetScanner-Blacklist`
    - **Type:** IP List
-   - **Source:** `https://raw.githubusercontent.com/f3cSystems/BlockList_IP/main/blacklist.txt`
+   - **Source:** `https://raw.githubusercontent.com/f3csystems/BlockList_IP/main/blacklist.txt`
    - **Repeat:** Every 30 minutes
 3. Create a **Security Policy** referencing this EDL as source address with action **Deny**
 
 **CLI equivalent:**
 ```
 set external-list InternetScanner-Blacklist type ip
-set external-list InternetScanner-Blacklist url "https://raw.githubusercontent.com/f3cSystems/BlockList_IP/main/blacklist.txt"
+set external-list InternetScanner-Blacklist url "https://raw.githubusercontent.com/f3csystems/BlockList_IP/main/blacklist.txt"
 set external-list InternetScanner-Blacklist recurring five-minute
 
 set rulebase security rules Block-InternetScanners from any to any
@@ -90,7 +90,7 @@ set rulebase security rules Block-InternetScanners log-start yes
 1. In **SmartConsole**, go to **New > More > Network Feed**
 2. Configure:
    - **Name:** `InternetScanner-Blacklist`
-   - **URL:** `https://raw.githubusercontent.com/f3cSystems/BlockList_IP/main/blacklist.txt`
+   - **URL:** `https://raw.githubusercontent.com/f3csystems/BlockList_IP/main/blacklist.txt`
    - **Update interval:** 30 minutes
    - **Content type:** IP Address
 3. Use this object as **Source** in a **Drop** rule
