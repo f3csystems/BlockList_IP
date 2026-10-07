@@ -2,8 +2,8 @@
 
 Automatically updated blacklist of IP addresses observed performing internet-wide scanning.
 
-**Last updated:** 2026-10-08 01:05
-**Total active IPs:** 2427
+**Last updated:** 2026-10-08 01:35
+**Total active IPs:** 2432
 **Retention policy:** 30 days — IPs not seen for 30+ days are automatically removed
 
 ## Files
@@ -13,16 +13,16 @@ Automatically updated blacklist of IP addresses observed performing internet-wid
 ## Top 10 Scanners
 | IP | Scans | Country | Types |
 |----|-------|---------|-------|
-| 198.235.24.238 | 13121 | BE | PaloAlto, ssh |
-| 147.185.132.165 | 11981 | US | PaloAlto, email |
-| 205.210.31.222 | 10297 | BR | PaloAlto |
-| 198.235.24.99 | 10027 | TW | PaloAlto, ssh |
-| 198.235.24.183 | 10021 | BE | PaloAlto |
-| 147.185.132.81 | 9214 | US | PaloAlto |
-| 147.185.132.207 | 9153 | US | PaloAlto |
-| 147.185.132.21 | 9087 | US | Censys, PaloAlto |
-| 198.235.24.104 | 7911 | TW | PaloAlto |
-| 147.185.132.45 | 7732 | US | PaloAlto |
+| 198.235.24.238 | 13131 | BE | PaloAlto, ssh |
+| 147.185.132.165 | 11991 | US | PaloAlto, email |
+| 205.210.31.222 | 10308 | BR | PaloAlto |
+| 198.235.24.99 | 10036 | TW | PaloAlto, ssh |
+| 198.235.24.183 | 10031 | BE | PaloAlto |
+| 147.185.132.81 | 9221 | US | PaloAlto |
+| 147.185.132.207 | 9161 | US | PaloAlto |
+| 147.185.132.21 | 9101 | US | Censys, PaloAlto |
+| 198.235.24.104 | 7918 | TW | PaloAlto |
+| 147.185.132.45 | 7741 | US | PaloAlto |
 
 ## Firewall Integration — External Dynamic Lists / Threat Feeds
 
